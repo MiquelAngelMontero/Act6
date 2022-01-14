@@ -10,8 +10,11 @@ public class Act12 {
 
 		String tamS = JOptionPane.showInputDialog("Indica el tamanyo de la array");
 		int tam = Integer.parseInt(tamS);
+		String numf;
 		
-		String numf = JOptionPane.showInputDialog("Indica el número final");
+		do {
+			numf = JOptionPane.showInputDialog("Indica el número final");
+		}while(Integer.parseInt(numf)>9);
 		
 		int array[] = new int[tam];
 		
