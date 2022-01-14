@@ -15,15 +15,25 @@ public class Act11 {
 		int array2[] = new int[tam];
 		
 		llenarArray(array1);
-		llenarArray(array2);
 		
-		multiplicarArray(array1, array2);
+		array2 = array1;
 		
 		System.out.println("Array1: ");
 		mostrarArray(array1);
 		
 		System.out.println("\nArray2");
 		mostrarArray(array2);
+		
+		llenarArray(array2);
+		
+		System.out.println("Array1 (despues de cambiar la array2): ");
+		mostrarArray(array1);
+		
+		System.out.println("\nArray2 (despues de cambiar la array2):");
+		mostrarArray(array2);
+		
+		multiplicarArray(array1, array2);
+	
 		
 		System.out.println("\nArray multiplicada");
 		mostrarArray(multiplicarArray(array1, array2));
