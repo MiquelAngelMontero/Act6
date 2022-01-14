@@ -29,12 +29,15 @@ public class Act10 {
 	public static void llenarArrayPrimos(int array[], int min, int max) {
 
 		for(int i=0; i<array.length; i++) {
-			boolean primo = true;
+			boolean primo = false;
 			
 			do {
-				array[i] = (int) (Math.random() * (max - min)+min);
 				
-				calcularPrimo(array[i]);
+				int rand = (int) (Math.random() * (max - min)+min);
+				if (calcularPrimo(rand)) {
+					array[i]=rand;
+					primo = true;
+				}
 				
 			}while(primo==false);
 		}		
